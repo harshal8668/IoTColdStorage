@@ -1,0 +1,170 @@
+  /* HEADER */
+  header {
+    background-color: rgb(43, 42, 42);
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: wheat;
+  }
+  .nav-link img {
+    width: clamp(30px,2vw,10px);
+    height: clamp(30px,2vw,10px);
+  }
+
+  /* DARKMODE */
+input[type="checkbox"] {
+    display: none;
+  }
+  form p{
+    position: relative;
+    z-index: 2;
+    color: black;
+  }
+  .btngrp {
+    text-align: center;
+    margin-inline: auto;
+    display: flex;
+    gap: 7px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: max-content;
+  }
+  
+  .btngrp button {
+    padding: 10px 15px;
+    border: unset;
+    border-radius: 15px;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+  }
+  
+  .btngrp button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+  }
+  
+  .btngrp button:hover {
+    color: #e8e8e8;
+  }
+  
+  .btngrp button:hover::before {
+    width: 100%;
+  }
+ 
+  h5{
+    margin-top: 2vw;
+}
+
+input[type=number]{
+    width: 120px;
+    border-radius: 10px;
+    padding-inline-start: 10px;
+}
+  .nav-link:hover{
+    color:aqua;
+}
+.OuterDeviceContainer .deviceContainer .deviceCard a button{
+    background-color: #787979;
+    box-shadow: rgba(44, 45, 44, 0.35) 0 -25px 18px -14px inset,rgba(56, 56, 56, 0.25) 0 1px 2px,rgba(98, 98, 98, 0.25) 0 2px 4px,rgba(111, 113, 112, 0.25) 0 4px 8px,rgba(110, 110, 110, 0.25) 0 8px 16px,rgba(108, 109, 108, 0.25) 0 16px 32px;
+    border-radius: 100px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Damion", cursive;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    transform: scale(1.02);
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+  }
+  
+  .OuterDeviceContainer .deviceContainer .deviceCard a button:hover {
+    box-shadow:
+     rgba(44, 45, 44, 0.35) 0 -25px 18px -14px inset,rgba(56, 56, 56, 0.25) 0 1px 2px,rgba(98, 98, 98, 0.25) 0 2px 4px,rgba(111, 113, 112, 0.25) 0 4px 8px,rgba(110, 110, 110, 0.25) 0 8px 16px,rgba(108, 109, 108, 0.25) 0 16px 32px;
+    transform: scale(1.06);
+  }
+
+
+@media screen and (max-width:376px) {
+    .LoginContainer{
+        padding: 5px;
+    }
+    .form_main {
+        width: 260px;
+        height: 450px;
+        padding: 10px;
+    }
+    .WelcomeContainer{
+        width: 90%;
+    }
+    .OuterDeviceContainer {
+        margin-inline: auto;
+        width: 95%;
+        margin-top: 30px;
+    }
+    .deviceContainer {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+      }
+      .btngrp{
+        width: 280px;
+
+      }
+    
+  }
+
+  @media screen and (min-width:376px) and (max-width:551px) {
+
+    .WelcomeContainer{
+        width: 400px;
+    }
+    .OuterDeviceContainer {
+        margin-inline: auto;
+        width: 95%;
+        margin-top: 30px;
+        /* border: 2px solid ; */
+    }
+    .deviceContainer {
+        grid-template-columns: auto;
+        gap: 10px;
+      } 
+  }
+  @media screen and (min-width:551px) and (max-width:800px) {
+
+
+    .OuterDeviceContainer {
+        margin-inline: auto;
+        width: 95%;
+        margin-top: 30px;
+    }
+    .deviceContainer {
+        grid-template-columns: auto auto;
+        gap: 10px;
+      } 
+  }

@@ -1,0 +1,64 @@
+
+.nav-link:hover{
+    color: aqua;
+}
+
+
+@media screen and (max-width:376px) {
+    .LoginContainer{
+        padding: 5px;
+    }
+    .form_main {
+        width: 260px;
+        height: 450px;
+        padding: 10px;
+    }
+    .WelcomeContainer{
+        width: 90%;
+    }
+    .OuterDeviceContainer {
+        margin-inline: auto;
+        width: 95%;
+        margin-top: 30px;
+    }
+    .deviceContainer {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+      }
+      .btngrp{
+        width: 280px;
+
+      }
+    
+  }
+
+  @media screen and (min-width:376px) and (max-width:551px) {
+
+    .WelcomeContainer{
+        width: 400px;
+    }
+    .OuterDeviceContainer {
+        margin-inline: auto;
+        width: 95%;
+        margin-top: 30px;
+        /* border: 2px solid ; */
+    }
+    .deviceContainer {
+        grid-template-columns: auto;
+        gap: 10px;
+      } 
+  }
+  @media screen and (min-width:551px) and (max-width:800px) {
+
+
+    .OuterDeviceContainer {
+        margin-inline: auto;
+        width: 95%;
+        margin-top: 30px;
+    }
+    .deviceContainer {
+        grid-template-columns: auto auto;
+        gap: 10px;
+      } 
+  }
