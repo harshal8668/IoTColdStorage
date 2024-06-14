@@ -7,8 +7,8 @@
 #include <WiFiUdp.h>
 
 // Setting wifi password and name
-const char* ssid = "iotcold";
-const char* password = "1234567890";
+const char* ssid = "wifiname";
+const char* password = "wifipassword";
 
 // Creating wifi and http client object
 WiFiClient  client;
@@ -34,8 +34,8 @@ int r3=0,r3on=0,r3off=0,dev3on,dev3off,offTimeStart3=0;
 
 
 // Setting Thingspeak details 
-unsigned long counterChannelNumber = 2473069;            // Channel ID
-const char * myCounterReadAPIKey = "FW6PX9J38PRLL7JP"; // Read API Key
+unsigned long counterChannelNumber = thingspeakchannelno;            // Channel ID
+const char * myCounterReadAPIKey = "thingspeakReadApi"; // Read API Key
 
 
 void setup(){
