@@ -1,7 +1,7 @@
 # IoTColdStorage
 
 This is a Industrial project of IoT domain completed under the guidance of industry experts from V. S Informatics private limited
-
+This system provides automated and manual control for Cold Storage
 Food import and export industries face challenges in maintaining the quality and lifespan of bananas due to rapid microbial growth during power outages, leading to significant spoilage. To address this, we propose a microcontroller- based IoT system that monitors the storage environment and remotely controls the release of ethylene gas, ensuring optimal conditions and reducing losses.
 
 The actual problem received is for storing bananas. The issue is that after power cuts off, there is rapid growth of bacteria's and microorganism due to which bananas get rotten which result in huge loss. They want a system which can help in monitoring of storage environment which can be remotely controlled. The system must be able to release the specific amount of ethylene gas for specific amount of time.
