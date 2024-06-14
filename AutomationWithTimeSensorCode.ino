@@ -21,8 +21,8 @@ WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org");
 
 // Setting wifi name and password
-const char* ssid = "iotcold";
-const char* password = "1234567890"; 
+const char* ssid = "wifiname";
+const char* password = "wifipassword"; 
 
 // Defining pins for sensors
 #define DHTPIN D3
@@ -30,9 +30,9 @@ const char* password = "1234567890";
 DHT dht(DHTPIN, DHTTYPE);
 
 // Setting api keys for thingspeak 
-unsigned long myChannelNumber = 2473069;
-const char * myWriteAPIKey = "16BD2RV42BA6HC3R";
-const char * myReadAPIKey = "FW6PX9J38PRLL7JP";
+unsigned long myChannelNumber = ThingspeakChannelNo;
+const char * myWriteAPIKey = "ThingspeakWriteKey";
+const char * myReadAPIKey = "ThingspeakReadKey";
 String myStatus = "";
 
 // Defining variables
@@ -164,7 +164,7 @@ void loop(){
     if(send==0 || getcurrtime-getSendTime>=900000){ //FIRST ALERT MSG or SEND MSG AFTER EVERY 15 Min
       Serial.println("ALERT MSG SEND");
       String message="Alert...Take Action. "+ curr_condition;
-      String url = "http://api.callmebot.com/text.php?user=borkarh&text="+urlEncode(message);
+      String url = "callmebotAPIkey"+urlEncode(message);
 
       httpResponseCode = 0;
 
@@ -303,7 +303,7 @@ void loop(){
         if(x == 200){
           Serial.println("Channel update successful.");
           String msg="Automatic time updated";
-          String url = "http://api.callmebot.com/text.php?user=borkarh&text="+urlEncode(msg);
+          String url = "callmebotAPIkey"+urlEncode(msg);
 
           httpResponseCode = 0;
 
